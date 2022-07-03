@@ -10,6 +10,7 @@ def home():
 def about():
     return render_template('aboutus.html')
 
+
 @app_route.route('/classes')
 def classes():
     return render_template('classes.html')
