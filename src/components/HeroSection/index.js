@@ -13,7 +13,6 @@ import {
     ArrowRight,
 } from "./HeroElements";
 
-
 const HeroSection = () => {
     const [hover, setHover] = useState(false);
 
@@ -31,12 +30,12 @@ const HeroSection = () => {
                 <HeroP>2022 四校聯合資訊營</HeroP>
                 <HeroBtnWrapper>
                     <ButtonR
-                        to="signup"
+                        to="www.google.com"
                         onMouseEnter={onHover}
                         onMouseLeave={onHover}
-                        cyan='true'
-                        dark='true'
-                        fontBig='true'
+                        cyan="true"
+                        dark="true"
+                        fontBig="true"
                     >
                         報名表單 {hover ? <ArrowForward /> : <ArrowRight />}
                     </ButtonR>

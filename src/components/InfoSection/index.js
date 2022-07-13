@@ -54,7 +54,7 @@ const InfoSection = ({
                                 <BtnWrap>
                                     {buttonEnable ? (
                                         <ButtonS
-                                            to={to}
+                                            to="www.google.com"
                                             cyan={cyan ? 1 : 0}
                                             dark={dark ? 1 : 0}
                                             dark2={dark2 ? 1 : 0}

@@ -125,7 +125,8 @@ const Signup = () => {
                             <FormLabel htmlFor="file">家同</FormLabel>
                             <FormFileUpload type="file" id="file-input" />
                             <FormFileLabel htmlFor="file-input">
-                                <AiFillFileAdd transform="scale(1.35)" /> &thinsp;選擇檔案
+                                <AiFillFileAdd transform="scale(1.35)" />{" "}
+                                &thinsp;選擇檔案
                             </FormFileLabel>
                         </FormFileWrap>
                         <FormButton type="submit">報名</FormButton>
