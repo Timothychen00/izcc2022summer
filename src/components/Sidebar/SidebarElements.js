@@ -20,6 +20,7 @@ export const SidebarContainer = styled.aside`
 
 export const CloseIcon = styled(FaTimes)`
     color: #fff;
+    margin-right: 50px;
 `;
 
 export const Icon = styled.div`
@@ -51,7 +52,7 @@ export const SidebarLink = styled(LinkS)`
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 40px;
+    margin-right: 90px;
     font-size: 1.5rem;
     font-weight: 600;
     text-decoration: none;
@@ -70,6 +71,9 @@ export const SidebarLink = styled(LinkS)`
 export const SideBtnWrap = styled.div`
     display: flex;
     justify-content: center;
+    margin-right: 50px;
+    margin-top: -80px;
+    margin-bottom: 50px;
 `;
 
 export const SidebarRoute = styled(LinkR)`

@@ -12,7 +12,7 @@ export const InfoContainer = styled.div`
 export const InfoWrapper = styled.div`
     display: grid;
     z-index: 1;
-    height: 860px;
+    height: 900px;
     width: 100%;
     max-width: 1100px;
     margin-right: auto;
@@ -29,8 +29,8 @@ export const InfoRow = styled.div`
         imgStart ? `'col2 col1'` : `'col1 col2'`};
 
     @media screen and (max-width: 768px) {
-        grid-template-columns: ${({ imgStart }) =>
-            imgStart ? `'col1 col2'` : `'col1 col1' 'col2 col2'`};
+        grid-template-areas: ${({ imgStart }) =>
+            imgStart ? `'col1' 'col2'` : `'col1 col1' 'col2 col2'`};
     }
 `;
 
@@ -50,50 +50,111 @@ export const TextWrapper = styled.div`
     max-width: 540px;
     padding-top: 0;
     padding-bottom: 60px;
+
+    @media screen and (max-width: 768px) {
+        padding-top: 60px;
+    }
 `;
 
 export const TopLine = styled.p`
-    color: #a5dbf7;
-    font-size: 16px;
+    color: ${({ headlinedark }) => (headlinedark ? "#0d7bd4" : "#a5dbf7")};
+    font-size: 30px;
+    font-family: "Noto Sans TC", sans-serif;
+    margin-left: -3px;
     line-height: 16px;
     font-weight: 700;
     letter-spacing: 1.4px;
     text-transform: uppercase;
     margin-top: 16px;
+
+    @media screen and (max-width: 768px) {
+        margin-left: 5px;
+        font-size: 25px;
+    }
+
+    @media screen and (max-width: 480px) {
+        margin-left: -20px;
+        font-size: 15px;
+    }
 `;
 
 export const Heading = styled.h1`
     margin-bottom: 24px;
-    font-size: 48px;
+    margin-left: -5px;
+    font-size: 72px;
+    font-family: "Noto Sans TC", sans-serif;
     line-height: 1.1;
     font-weight: 600;
     color: ${({ lightText }) => (lightText ? "#f7f8fa" : "#010606")};
 
+    @media screen and (max-width: 768px) {
+        margin-left: 5px;
+        font-size: 60px;
+    }
+
     @media screen and (max-width: 480px) {
-        font-size: 32px;
+        margin-left: -20px;
+        font-size: 45px;
     }
 `;
 
 export const Subtitle = styled.p`
     max-width: 440px;
     margin-bottom: 35px;
+    font-family: "Noto Sans TC", sans-serif;
     font-size: 18px;
-    line-height: 24px;
+    line-height: 30px;
+    word-wrap: break-word;
+    word-break: break-all;
+    overflow: hidden;
     color: ${({ darkText }) => (darkText ? "#010606" : "#fff")};
+
+    @media screen and (max-width: 768px) {
+        padding-right: 20px;
+        margin-right: 20px;
+        margin-left: 10px;
+        font-size: 18px;
+    }
+
+    @media screen and (max-width: 480px) {
+        padding-right: 20px;
+        margin-right: 20px;
+        margin-left: -18px;
+        font-size: 15px;
+    }
 `;
 
 export const BtnWrap = styled.div`
     display: flex;
     justify-content: flex-start;
+
+    @media screen and (max-width: 768px) {
+        margin-left: 10px;
+    }
+
+    @media screen and (max-width: 480px) {
+        margin-left: -15px;
+    }
 `;
 
 export const ImgWrap = styled.div`
     max-width: 555px;
     height: 100%;
+    margin-top: ${({ buttonEnable }) => (buttonEnable ? "0px" : "-100px")};
 `;
 
 export const Img = styled.img`
     width: 100%;
     margin: 0 0 10px 0;
-    padding-right: 0;
+
+    @media screen and (max-width: 768px) {
+        width: 80%;
+        padding-left: 15px;
+        margin: -30px 0 30px 0;
+    }
+
+    @media screen and (max-width: 480px) {
+        width: 90%;
+        margin-left: -20px;
+    }
 `;

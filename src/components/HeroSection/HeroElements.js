@@ -43,7 +43,7 @@ export const HeroBg = styled.div`
 export const ImageBg = styled.img`
     width: 100%;
     height: 115%;
-    opacity: 0%;
+    opacity: 60%;
     -o-object-fit: cover;
     object-fit: cover;
     background: #0c0c0c;
@@ -53,6 +53,7 @@ export const ImageBg = styled.img`
 export const HeroContent = styled.div`
     z-index: 3;
     max-width: 1200px;
+    margin-top: 200px;
     position: absolute;
     padding: 8px 24px;
     display: flex;
@@ -64,7 +65,7 @@ export const HeroContent = styled.div`
 export const HeroH1 = styled.h1`
     color: #87d3ff;
     -webkit-text-stroke: 2px black;
-    font-size: 70px;
+    font-size: 80px;
     font-weight: 700;
     text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1),
         0px 18px 23px rgba(0, 0, 0, 0.1);

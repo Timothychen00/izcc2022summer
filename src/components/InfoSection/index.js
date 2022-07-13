@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from "react-scroll";
+import { ButtonS } from "../ButtonElements";
 
 import {
     InfoContainer,
@@ -16,25 +16,65 @@ import {
     Img,
 } from "./InfoElements";
 
-const InfoSection = () => {
+const InfoSection = ({
+    lightBg,
+    id,
+    imgStart,
+    topLine,
+    lightText,
+    heading,
+    darkText,
+    description,
+    to,
+    cyan,
+    dark,
+    dark2,
+    buttonLabel,
+    buttonEnable,
+    headlinedark,
+    img,
+    alt,
+}) => {
     return (
         <>
-            <InfoContainer>
+            <InfoContainer lightBg={lightBg} id={id}>
                 <InfoWrapper>
-                    <InfoRow>
+                    <InfoRow imgStart={imgStart}>
                         <Column1>
                             <TextWrapper>
-                                <TopLine>TopLine</TopLine>
-                                <Heading>Heading</Heading>
-                                <Subtitle>Subtitle</Subtitle>
+                                <TopLine headlinedark={headlinedark}>
+                                    {topLine}
+                                </TopLine>
+                                <Heading lightText={lightText}>
+                                    {heading}
+                                </Heading>
+                                <Subtitle darkText={darkText}>
+                                    {description}
+                                </Subtitle>
                                 <BtnWrap>
-                                    <Button to="home" />
+                                    {buttonEnable ? (
+                                        <ButtonS
+                                            to={to}
+                                            cyan={cyan ? 1 : 0}
+                                            dark={dark ? 1 : 0}
+                                            dark2={dark2 ? 1 : 0}
+                                            smooth={true}
+                                            duration={500}
+                                            spy={true}
+                                            exact="true"
+                                            offset={-80}
+                                        >
+                                            {buttonLabel}
+                                        </ButtonS>
+                                    ) : (
+                                        <p>&nbsp;</p>
+                                    )}
                                 </BtnWrap>
                             </TextWrapper>
                         </Column1>
                         <Column2>
-                            <ImgWrap>
-                                <Img />
+                            <ImgWrap buttonEnable={buttonEnable}>
+                                <Img src={img} alt={alt} />
                             </ImgWrap>
                         </Column2>
                     </InfoRow>

@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { animateScroll as scroll } from "react-scroll";
 import { FaBars } from "react-icons/fa";
+import { IconContext } from "react-icons/lib";
 import {
     Nav,
     NavbarContainer,
@@ -13,33 +15,91 @@ import {
 } from "./NavbarElements";
 
 const Navbar = ({ toggle }) => {
+    const [scrollNav, setScrollNav] = useState(false);
+
+    const changeNav = () => {
+        if (window.scrollY >= 80) {
+            setScrollNav(true);
+        } else {
+            setScrollNav(false);
+        }
+    };
+
+    useEffect(() => {
+        window.addEventListener("scroll", changeNav);
+    }, []);
+
+    const toggleHome = () => {
+        scroll.scrollToTop();
+    };
+
     return (
         <>
-            <Nav>
-                <NavbarContainer>
-                    <NavLogo to="/">IZCC</NavLogo>
-                    <Hamburger onClick={toggle}>
-                        <FaBars />
-                    </Hamburger>
-                    <NavMenu>
-                        <NavItem>
-                            <NavLinks to="about">關於</NavLinks>
-                        </NavItem>
-                        <NavItem>
-                            <NavLinks to="class">課程</NavLinks>
-                        </NavItem>
-                        <NavItem>
-                            <NavLinks to="schedule">行程</NavLinks>
-                        </NavItem>
-                        <NavItem>
-                            <NavLinks to="contact">聯絡</NavLinks>
-                        </NavItem>
-                    </NavMenu>
-                    <NavButton>
-                        <NavBtnLink to="/signup">報名</NavBtnLink>
-                    </NavButton>
-                </NavbarContainer>
-            </Nav>
+            <IconContext.Provider value={{ color: "#fff" }}>
+                <Nav scrollNav={scrollNav}>
+                    <NavbarContainer>
+                        <NavLogo to="/" onClick={toggleHome}>
+                            IZCC
+                        </NavLogo>
+                        <Hamburger onClick={toggle}>
+                            <FaBars />
+                        </Hamburger>
+                        <NavMenu>
+                            <NavItem>
+                                <NavLinks
+                                    to="about"
+                                    smooth={true}
+                                    duration={800}
+                                    spy={true}
+                                    exact="true"
+                                    offset={-80}
+                                >
+                                    關於
+                                </NavLinks>
+                            </NavItem>
+                            <NavItem>
+                                <NavLinks
+                                    to="class"
+                                    smooth={true}
+                                    duration={800}
+                                    spy={true}
+                                    exact="true"
+                                    offset={-80}
+                                >
+                                    課程
+                                </NavLinks>
+                            </NavItem>
+                            <NavItem>
+                                <NavLinks
+                                    to="schedule"
+                                    smooth={true}
+                                    duration={800}
+                                    spy={true}
+                                    exact="true"
+                                    offset={-80}
+                                >
+                                    行程
+                                </NavLinks>
+                            </NavItem>
+                            <NavItem>
+                                <NavLinks
+                                    to="contact"
+                                    smooth={true}
+                                    duration={800}
+                                    spy={true}
+                                    exact="true"
+                                    offset={-80}
+                                >
+                                    聯絡
+                                </NavLinks>
+                            </NavItem>
+                        </NavMenu>
+                        <NavButton>
+                            <NavBtnLink to="/signup">報名</NavBtnLink>
+                        </NavButton>
+                    </NavbarContainer>
+                </Nav>
+            </IconContext.Provider>
         </>
     );
 };

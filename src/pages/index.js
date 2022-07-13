@@ -1,7 +1,12 @@
 import React, { useState } from "react";
+import Class1 from "../components/Classes/Class_1";
+import Class2 from "../components/Classes/Class_2";
+import Footer from "../components/Footer";
 import HeroSection from "../components/HeroSection";
 import InfoSection from "../components/InfoSection";
+import { homeObjOne } from "../components/InfoSection/Data";
 import Navbar from "../components/Navbar";
+import Schedule from "../components/Schedule";
 import Sidebar from "../components/Sidebar";
 
 const Home = () => {
@@ -16,7 +21,11 @@ const Home = () => {
             <Sidebar isOpen={isOpen} toggle={toggle} />
             <Navbar toggle={toggle} />
             <HeroSection />
-            <InfoSection />
+            <InfoSection {...homeObjOne} />
+            <Class1 />
+            <Class2 />
+            <Schedule />
+            <Footer />
         </>
     );
 };
