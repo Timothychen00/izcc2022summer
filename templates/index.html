@@ -1,36 +1,24 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <title>Title</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS v5.2.0-beta1 -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"  integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-
-  </head>
-  <body>
-      <div class="container-fluid">
-        <div class="row justify-content-center vh-100 align-content-center">
-          <div class="col-6">
-            <form action="/join" method="post" enctype="multipart/form-data">
-              <input type="file" name="file" id="file" class="form-control">
-              <input type="submit" value="送出" class="btn btn-primary mt-2">
-          </form>
-          </div>
+    <head><meta charset="utf-8"/>
+        <link rel="icon" href="static/media/izcc-icon.jpg"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1"/>
+        <meta name="theme-color" content="#000000"/>
+        <meta name="description" content="izcc website"/>
+        <link rel="manifest" href="/manifest.json"/>
+        <title>IZCC - 楓落景畔遇建成</title>
+        <link rel="stylesheet" href="/static/css/template.css">
+        {% block js %}
+        <script defer="defer" src="/static/js/main.a740cf4c.js"></script>
+        {%endblock js%}
+        <link href="/static/css/main.d1815764.css" rel="stylesheet">
+    </head>
+    <body class="index">
+        {% block main_content %}
+        <div id="root">
+            
+            
         </div>
-      </div>
-
-    <!-- Bootstrap JavaScript Libraries -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
-    <script>
-      {% with msgs=get_flashed_messages() %}
-        {%for msg in msgs%}
-        alert('{{msg}}');
-        {% endfor%}
-      {%endwith%}
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
-  </body>
+        {% endblock main_content %}
+    </body>
 </html>
