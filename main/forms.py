@@ -17,6 +17,6 @@ class JoinForm(FlaskForm):
     parentRelation=TextField('家人關係',validators=[InputRequired()])
     eat=RadioField('葷素',validators=[InputRequired()],choices=['葷','素'])
     sick=TextField('重大疾病')
-    file=FileField('家同')
+    file=FileField('家同',validators=[InputRequired()])
     submit=SubmitField('送出')
     
