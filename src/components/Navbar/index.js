@@ -38,7 +38,7 @@ const Navbar = ({ toggle }) => {
             <IconContext.Provider value={{ color: "#fff" }}>
                 <Nav scrollNav={scrollNav}>
                     <NavbarContainer>
-                        <NavLogo to="/" onClick={toggleHome}>
+                        <NavLogo href="/" onClick={toggleHome}>
                             IZCC
                         </NavLogo>
                         <Hamburger onClick={toggle}>
@@ -95,7 +95,7 @@ const Navbar = ({ toggle }) => {
                             </NavItem>
                         </NavMenu>
                         <NavButton>
-                            <NavBtnLink to="/signup">報名</NavBtnLink>
+                            <NavBtnLink href="/join">報名</NavBtnLink>
                         </NavButton>
                     </NavbarContainer>
                 </Nav>

@@ -65,7 +65,7 @@ const Sidebar = ({ isOpen, toggle }) => {
                 </SidebarMenu>
             </SidebarWrapper>
             <SideBtnWrap>
-                <SidebarRoute to="/signup">報名</SidebarRoute>
+                <SidebarRoute href="/join">報名</SidebarRoute>
             </SideBtnWrap>
         </SidebarContainer>
     );

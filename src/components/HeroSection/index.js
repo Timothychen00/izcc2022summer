@@ -30,7 +30,7 @@ const HeroSection = () => {
                 <HeroP>2022 四校聯合資訊營</HeroP>
                 <HeroBtnWrapper>
                     <ButtonR
-                        to="www.google.com"
+                        href="/join"
                         onMouseEnter={onHover}
                         onMouseLeave={onHover}
                         cyan="true"
