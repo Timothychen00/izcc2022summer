@@ -19,72 +19,81 @@
                 {{form.csrf_token()}}
                 <label for="name" class="form-label text-white ms-4">姓名</label>
                     <div class="mx-4">
-                        <!-- <input type="text" class="form-control" id="name"> -->
                         {{form.name(class_='form-control')}}
                     </div>
                 <label for="old-school" class="form-label text-white ms-4 mt-4">就讀學校</label>
                     <div class="mx-4">
-                        <!-- <input type="text" class="form-control" id="old-school"> -->
                         {{form.old_school(class_='form-control')}}
                     </div>
                 <label for="new-school" class="form-label text-white ms-4 mt-4">錄取學校</label>
                     <div class="mx-4">
-                        <input type="text" class="form-control" id="new--school">
+                        {{form.new_school(class_='form-control')}}
                     </div>
                 <label for="birth" class="form-label text-white ms-4 mt-4">生日</label>
                     <div class="mx-4">
-                        <input type="date" class="form-control" id="birth">
+                        <input type="date" class="form-control" id="birth" name="birth">
                     </div>
                 <label for="birth" class="form-label text-white ms-4 mt-4 w-100">性別</label>
+                    {%for subitem in form.sex%}
                     <div class="form-check form-check-inline ms-4">
-                        <input class="form-check-input " type="radio" name="gender" id="gender" value="option1">
-                        <label class="form-check-label text-white" for="inlineRadio1">男</label>
+                        {{subitem(class_="form-check-input") }}
+                        {{subitem.label(class_='form-check-label text-white')}}
                     </div>
-                    <div class="form-check form-check-inline ">
-                        <input class="form-check-input " type="radio" name="gender" id="gender" value="option2">
-                        <label class="form-check-label text-white " for="inlineRadio2">女</label>
-                    </div>
+                    {%endfor%}
                 <label for="email" class="form-label text-white ms-4 mt-4 w-100">信箱</label>
                     <div class="mx-4">
-                        <input type="email" class="form-control" id="email" placeholder="範例：helloworid@gmail.com">
+                        {{form.email(class_='form-control')}}
                     </div>
                 <label for="phone" class="form-label text-white ms-4 mt-4">手機號碼</label>
                     <div class="mx-4">
-                        <input type="phone" class="form-control" id="phone" placeholder="範例：0910123123">
+                        {{form.phone(class_='form-control')}}
                     </div>
                 <label for="number" class="form-label text-white ms-4 mt-4">身分證字號</label>
                     <div class="mx-4">
-                        <input type="text" class="form-control" id="number">
+                        {{form.ID(class_='form-control')}}
                     </div>
                 <label for="phone" class="form-label text-white ms-4 mt-4">家人手機</label>
                     <div class="mx-4">
-                        <input type="phone" class="form-control" id="phone" placeholder="範例：0910123123">
+                        {{form.parentPhone(class_='form-control')}}
+                    </div>
+                <label for="phone" class="form-label text-white ms-4 mt-4">家人身分證字號</label>
+                    <div class="mx-4">
+                        {{form.parentID(class_='form-control')}}
                     </div>
                 <label for="relation" class="form-label text-white ms-4 mt-4">家人關係</label>
                     <div class="mx-4">
-                        <input type="text" class="form-control" id="relation">
+                        {{form.parentRelation(class_='form-control')}}
                     </div>
                 <label for="eat" class="form-label text-white ms-4 mt-4 w-100">葷素</label>
+                    {%for subitem in form.eat%}
                     <div class="form-check form-check-inline ms-4">
-                        <input class="form-check-input " type="radio" name="eat" id="eat" value="option1">
-                        <label class="form-check-label text-white" for="inlineRadio1">葷</label>
+                        {{subitem(class_="form-check-input") }}
+                        {{subitem.label(class_='form-check-label text-white')}}
                     </div>
-                    <div class="form-check form-check-inline ">
-                        <input class="form-check-input " type="radio" name="eat" id="eat" value="option2">
-                        <label class="form-check-label text-white " for="inlineRadio2">素</label>
-                    </div>
+                    {%endfor%}
                 <label for="sick" class="form-label text-white ms-4 mt-4 w-100">重大疾病</label>
                     <div class="mx-4">
-                        <input type="text" class="form-control" id="sick" placeholder="沒有則填無">
+                        {{form.sick(class_="form-control") }}
                     </div>
                 <label for="file" class="form-label text-white ms-4 mt-4 me-2">家同</label>
                     <label class="btn btn-info ">
-                        <input id="file"  class="w-100" style="display:none;" type="file">上傳檔案
+                        {{form.file(class_='w-100',style="display:none;")}}上傳檔案
                     </label><br>
-                <button type="submit" class="submit mt-4 mb-5  " >登入 </button>
+                <button type="submit" class="submit mt-4 mb-5 " >登入 </button>
             </form>
         </div>
     </div>
+
+    <script>
+        {%with msgs=get_flashed_messages()%}
+            {% if msgs %}
+                {% for msg in msgs %}
+                    alert("{{msg}}");
+                {% endfor %}
+            {% endif%}
+        {%endwith%}
+    </script>
+    
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
         integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
