@@ -13,3 +13,4 @@ WTForms==2.3.3
 pandas==1.2.4
 openpyxl
 gevent==21.12.0
+email-validator==1.2.1
