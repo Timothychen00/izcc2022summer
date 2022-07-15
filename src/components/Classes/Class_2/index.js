@@ -19,9 +19,9 @@ const Classes = () => {
                     style={{ cursor: "pointer" }}
                     onClick={(e) => {
                         e.preventDefault();
+                        window.open("https://reurl.cc/Xjo5Rj", "_blank");
                     }}
                 >
-                    {" "}
                     <ClassesIcon src={Icon1} />
                     <ClassesH2>量子</ClassesH2>
                     <ClassesP>
@@ -42,7 +42,13 @@ const Classes = () => {
                         演算法是把程式提升到另一層次的關鍵，透過好的演算法，能讓你的程式跑的更有效率。不管是競賽，公司面試等，演算法都是重要的一環。此堂課便會帶你了解基礎演算法思維。
                     </ClassesP>
                 </ClassesCard>
-                <ClassesCard>
+                <ClassesCard
+                    style={{ cursor: "pointer" }}
+                    onClick={(e) => {
+                        e.preventDefault();
+                        window.open("https://reurl.cc/2ZX86m", "_blank");
+                    }}
+                >
                     <ClassesIcon src={Icon3} />
                     <ClassesH2>資安 + 網路架構</ClassesH2>
                     <ClassesP>

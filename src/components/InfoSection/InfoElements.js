@@ -2,6 +2,11 @@ import styled from "styled-components";
 
 export const InfoContainer = styled.div`
     color: #fff;
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    justify-content: center;
+    z-index: 1;
     background: ${({ lightBg }) => (lightBg ? "#f9f9f9" : "#010606")};
 
     @media screen and (max-width: 768px) {
@@ -47,12 +52,20 @@ export const Column2 = styled.div`
 `;
 
 export const TextWrapper = styled.div`
-    max-width: 540px;
+    max-width: 400px;
     padding-top: 0;
     padding-bottom: 60px;
 
     @media screen and (max-width: 768px) {
         padding-top: 60px;
+    }
+
+    @media screen and (max-width: 480px) {
+        margin-left: 10px;
+    }
+
+    @media screen and (max-width: 375px) {
+        margin-left: 20px;
     }
 `;
 
@@ -81,7 +94,7 @@ export const TopLine = styled.p`
 export const Heading = styled.h1`
     margin-bottom: 24px;
     margin-left: -5px;
-    font-size: 72px;
+    font-size: 55px;
     font-family: "Noto Sans TC", sans-serif;
     line-height: 1.1;
     font-weight: 600;
@@ -89,17 +102,16 @@ export const Heading = styled.h1`
 
     @media screen and (max-width: 768px) {
         margin-left: 5px;
-        font-size: 60px;
+        font-size: 50px;
     }
 
     @media screen and (max-width: 480px) {
         margin-left: -20px;
-        font-size: 45px;
+        font-size: 40px;
     }
 `;
 
 export const Subtitle = styled.p`
-    max-width: 440px;
     margin-bottom: 35px;
     font-family: "Noto Sans TC", sans-serif;
     font-size: 18px;
@@ -110,7 +122,6 @@ export const Subtitle = styled.p`
     color: ${({ darkText }) => (darkText ? "#010606" : "#fff")};
 
     @media screen and (max-width: 768px) {
-        padding-right: 20px;
         margin-right: 20px;
         margin-left: 10px;
         font-size: 18px;
@@ -155,6 +166,10 @@ export const Img = styled.img`
 
     @media screen and (max-width: 480px) {
         width: 90%;
-        margin-left: -20px;
+        margin-left: 0px;
+    }
+
+    @media screen and (max-width: 375px) {
+        width: 90%;
     }
 `;

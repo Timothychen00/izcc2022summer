@@ -24,8 +24,27 @@ export const ScheduleWrapper = styled.div`
     padding: 0 24px;
     justify-content: center;
 
+    @media screen and (max-width: 1100px) {
+        display: block;
+        max-width: 700px;
+        overflow-x: auto;
+    }
+
+    @media screen and (max-width: 1000px) {
+        display: block;
+        max-width: 700px;
+        overflow-x: auto;
+    }
+
     @media screen and (max-width: 768px) {
         display: block;
+        max-width: 600px;
+        overflow-x: auto;
+    }
+
+    @media screen and (max-width: 650px) {
+        display: block;
+        max-width: 450px;
         overflow-x: auto;
     }
 
