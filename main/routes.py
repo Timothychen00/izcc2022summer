@@ -5,7 +5,6 @@ from main.model import db_model
 from main.forms import JoinForm
 load_dotenv()
 
-
 headers = {
     "Authorization": "Bearer " + os.environ['TOKEN'],
     "Content-Type": "application/x-www-form-urlencoded"
