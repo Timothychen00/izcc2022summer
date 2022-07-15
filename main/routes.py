@@ -20,8 +20,8 @@ def about():
             return render_template('join.html',form=form)
         # print(form.name.name)
         db_model.insert_data(form)
-        flash('')
-        return render_template('index.html')
+        flash('上傳成功')
+        return render_template('join.html',form=form)
         # for i in form:
         #     print(i.label,i.data)
     else:

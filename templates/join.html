@@ -185,6 +185,7 @@
             {% if msgs %}
                 {% for msg in msgs %}
                     alert("{{msg}}");
+                    location.href='/';
                 {% endfor %}
             {% endif%}
         {%endwith%}
