@@ -26,7 +26,7 @@ class DB():
                     filename = secure_filename(file.filename)
                     print(filename)
                     print(file)
-                    filename=filename.split('.')[1]
+                    filename=filename.split('.')[-1]
                     filename=form.name.data+'.'+filename
                     file.save(os.path.join('./', filename))
                     with open('./'+filename, "rb") as f:

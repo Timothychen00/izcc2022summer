@@ -15,14 +15,16 @@ def home():
 def about():
     form=JoinForm()
     if form.validate_on_submit():
+        if not form.file.data:
+            form.file.errors.append('請上傳檔案')
+            return render_template('join.html',form=form)
         # print(form.name.name)
-            db_model.insert_data(form)
-            return redirect('/')
+        db_model.insert_data(form)
+        flash('')
+        return render_template('index.html')
         # for i in form:
         #     print(i.label,i.data)
     else:
         for i in form:
-            print(i.errors)
-        for i in form:
-            print(i.data)
+            print(i.name,i.errors)
     return render_template('join.html',form=form)

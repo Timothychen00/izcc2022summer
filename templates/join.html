@@ -7,11 +7,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="/static/css/template.css">
+    <link rel="icon" href="/static/media/izcc-icon.jpg" />
 </head>
 <body>
     <div class="container justify-content-center">
         <div class="row m-3">
-            <h5 class="topic">IZCC</h5>
+            <h5 class="topic" onclick="location.href='/'">IZCC</h5>
         </div>
         <div class="row justify-content-center border mx-auto pt-5 mt-5">
             <h5 class="topic text-center mt-5">報名資料</h3>
@@ -21,18 +22,46 @@
                     <div class="mx-4">
                         {{form.name(class_='form-control')}}
                     </div>
+                    <ul class="ms-3 pt-1">
+                    {% if form.name.errors %}
+                    {% for error in form.name.errors %}
+                        <li style="color: red;">{{error}}</li>
+                    {% endfor %}
+                    {% endif %}
+                    </ul>
                 <label for="old-school" class="form-label text-white ms-4 mt-4">就讀學校</label>
                     <div class="mx-4">
                         {{form.old_school(class_='form-control')}}
                     </div>
+                    <ul class="ms-3 pt-1">
+                    {% if form.old_school.errors %}
+                    {% for error in form.old_school.errors %}
+                        <li style="color: red;">{{error}}</li>
+                    {% endfor %}
+                    {% endif %}
+                    </ul>
                 <label for="new-school" class="form-label text-white ms-4 mt-4">錄取學校</label>
                     <div class="mx-4">
                         {{form.new_school(class_='form-control')}}
                     </div>
+                    <ul class="ms-3 pt-1">
+                    {% if form.new_school.errors %}
+                    {% for error in form.new_school.errors %}
+                        <li style="color: red;">{{error}}</li>
+                    {% endfor %}
+                    {% endif %}
+                    </ul>
                 <label for="birth" class="form-label text-white ms-4 mt-4">生日</label>
                     <div class="mx-4">
                         <input type="date" class="form-control" id="birth" name="birth">
                     </div>
+                    <ul class="ms-3 pt-1">
+                    {% if form.birth.errors %}
+                    {% for error in form.birth.errors %}
+                        <li style="color: red;">{{error}}</li>
+                    {% endfor %}
+                    {% endif %}
+                    </ul>
                 <label for="birth" class="form-label text-white ms-4 mt-4 w-100">性別</label>
                     {%for subitem in form.sex%}
                     <div class="form-check form-check-inline ms-4">
@@ -40,49 +69,110 @@
                         {{subitem.label(class_='form-check-label text-white')}}
                     </div>
                     {%endfor%}
+                    <ul class="ms-3 pt-1">
+                    {% if form.sex.errors %}
+                    {% for error in form.sex.errors %}
+                        <li style="color: red;">{{error}}</li>
+                    {% endfor %}
+                    {% endif %}
+                    </ul>
                 <label for="email" class="form-label text-white ms-4 mt-4 w-100">信箱</label>
                     <div class="mx-4">
                         {{form.email(class_='form-control')}}
                     </div>
-                    {% for i in form.email.errors %}
-                        <td>{{i}}</td>
-                    {%endfor%}
+                    <ul class="ms-3 pt-1">
+                    {% if form.email.errors %}
+                    {% for error in form.email.errors %}
+                        <li style="color: red;">{{error}}</li>
+                    {% endfor %}
+                    {% endif %}
+                    </ul>
                 <label for="phone" class="form-label text-white ms-4 mt-4">手機號碼</label>
                     <div class="mx-4">
                         {{form.phone(class_='form-control')}}
+                        <ul class="ms-3 pt-1">
+                        {% if form.phone.errors %}
+                        {% for error in form.phone.errors %}
+                            <li style="color: red;">{{error}}</li>
+                        {% endfor %}
+                        {% endif %}
+                        </ul>
                     </div>
                 <label for="number" class="form-label text-white ms-4 mt-4">身分證字號</label>
                     <div class="mx-4">
                         {{form.ID(class_='form-control')}}
+                        <ul class="ms-3 pt-1">
+                        {% if form.ID.errors %}
+                        {% for error in form.ID.errors %}
+                            <li style="color: red;">{{error}}</li>
+                        {% endfor %}
+                        {% endif %}
+                        </ul>
                     </div>
                 <label for="phone" class="form-label text-white ms-4 mt-4">家人手機</label>
                     <div class="mx-4">
                         {{form.parentPhone(class_='form-control')}}
+                        <ul class="ms-3 pt-1">
+                        {% if form.parentPhone.errors %}
+                        {% for error in form.parentPhone.errors %}
+                            <li style="color: red;">{{error}}</li>
+                        {% endfor %}
+                        {% endif %}
+                        </ul>
                     </div>
                 <label for="phone" class="form-label text-white ms-4 mt-4">家人身分證字號</label>
                     <div class="mx-4">
                         {{form.parentID(class_='form-control')}}
+                        <ul class="ms-3 pt-1">
+                        {% if form.parentID.errors %}
+                        {% for error in form.parentID.errors %}
+                            <li style="color: red;">{{error}}</li>
+                        {% endfor %}
+                        {% endif %}
+                        </ul>
                     </div>
                 <label for="relation" class="form-label text-white ms-4 mt-4">家人關係</label>
                     <div class="mx-4">
                         {{form.parentRelation(class_='form-control')}}
+                        <ul class="ms-3 pt-1">
+                        {% if form.parentRelation.errors %}
+                        {% for error in form.parentRelation.errors %}
+                            <li style="color: red;">{{error}}</li>
+                        {% endfor %}
+                        {% endif %}
+                        </ul>
                     </div>
                 <label for="eat" class="form-label text-white ms-4 mt-4 w-100">葷素</label>
                     {%for subitem in form.eat%}
                     <div class="form-check form-check-inline ms-4">
                         {{subitem(class_="form-check-input") }}
                         {{subitem.label(class_='form-check-label text-white')}}
+                        <ul class="ms-3 pt-1">
+                        {% if form.eat.errors %}
+                        {% for error in form.eat.errors %}
+                            <li style="color: red;">{{error}}</li>
+                        {% endfor %}
+                        {% endif %}
+                        </ul>
                     </div>
                     {%endfor%}
-                <label for="sick" class="form-label text-white ms-4 mt-4 w-100">重大疾病</label>
+                <label for="sick" class="form-label text-white ms-4 mt-4 w-100">重大疾病(選填)</label>
                     <div class="mx-4">
                         {{form.sick(class_="form-control") }}
                     </div>
+                    
                 <label for="file" class="form-label text-white ms-4 mt-4 me-2">家同</label>
                     <label class="btn btn-primary ">
                         <svg stroke="currentColor" class='me-1 mb-1' fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" transform="scale(1.15)" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M480 580H372a8 8 0 0 0-8 8v48a8 8 0 0 0 8 8h108v108a8 8 0 0 0 8 8h48a8 8 0 0 0 8-8V644h108a8 8 0 0 0 8-8v-48a8 8 0 0 0-8-8H544V472a8 8 0 0 0-8-8h-48a8 8 0 0 0-8 8v108zm374.6-291.3c6 6 9.4 14.1 9.4 22.6V928c0 17.7-14.3 32-32 32H192c-17.7 0-32-14.3-32-32V96c0-17.7 14.3-32 32-32h424.7c8.5 0 16.7 3.4 22.7 9.4l215.2 215.3zM790.2 326L602 137.8V326h188.2z"></path></svg>
                         {{form.file(class_='w-100',style="display:none;")}}上傳檔案
                     </label><br>
+                    <ul class="ms-3 pt-1">
+                    {% if form.file.errors %}
+                    {% for error in form.file.errors %}
+                        <li style="color: red;">{{error}}</li>
+                    {% endfor %}
+                    {% endif %}
+                    </ul>
                 <div class="mx-4">
                     <button type="submit" class="submit mt-4 mb-5 " >送出報名 </button>
                 </div>
