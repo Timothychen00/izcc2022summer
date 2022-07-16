@@ -18,5 +18,6 @@ class JoinForm(FlaskForm):
     eat=RadioField('葷素',validators=[InputRequired('這是必填欄位')],choices=['葷','素'])
     sick=TextField('重大疾病')
     file=FileField('家同')
+    yellow_card=FileField('小黃卡')
     submit=SubmitField('送出')
     

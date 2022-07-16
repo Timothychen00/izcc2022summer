@@ -14,11 +14,12 @@ class DB():
         self.join_db=self.client.izcc_join
         self.join_collection=self.join_db.data
         self.join_collection_file=self.join_db.file
+        self.join_collection_file_yellow=self.join_db.yellow_card
         
     def insert_data(self,form):
         data={}
         for i in form:
-            if i.name!='file' and i.name!='submit' and i.name!='csrf_token':
+            if i.name!='file' and i.name!='submit' and i.name!='csrf_token' and i.name!='yellow_card':
                 data[i.name]=i.data
             if i.name=='file':
                 file=i.data
@@ -36,8 +37,31 @@ class DB():
                         data['file']=result.inserted_id
                         print(result.inserted_id)
                     os.remove(filename)
+                else:
+                    return {'file':'檔案類型錯誤'}
+
+            if i.name=='yellow_card':
+                file=i.data
+                if file and allowed_file(file.filename):
+                    filename = secure_filename(file.filename)
+                    print(filename)
+                    print(file)
+                    filename=filename.split('.')[-1]
+                    filename=form.name.data+'.'+filename
+                    file.save(os.path.join('./', filename))
+                    with open('./'+filename, "rb") as f:
+                        encoded = Binary(f.read())
+                        self.join_collection
+                        result=self.join_collection_file_yellow.insert_one({'name':form.name.data,'filename':filename,'file':encoded})
+                        data['file']=result.inserted_id
+                        print(result.inserted_id)
+                    os.remove(filename)
+                else:
+                    return {'yellow':'檔案類型錯誤'}
+                    
         data['birth']=str(data['birth'])
         self.join_collection.insert_one(data)
         print(data)
+        
         
 db_model=DB()

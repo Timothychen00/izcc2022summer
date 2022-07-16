@@ -15,6 +15,16 @@
 
 <body class="index">
     <div id="root"></div>
+    <script>
+        {%with msgs=get_flashed_messages()%}
+            {% if msgs %}
+                {% for msg in msgs %}
+                    alert("{{msg}}");
+                    location.href='/';
+                {% endfor %}
+            {% endif%}
+        {%endwith%}
+    </script>
 </body>
 
 </html>
