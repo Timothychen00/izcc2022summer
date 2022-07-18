@@ -43,12 +43,21 @@ export const FooterLinkItems = styled.div`
         display: flex;
         flex-direction: column;
         row-gap: 20px;
-        margin-left: 5px;
+        margin-left: 8px;
         padding: 10px;
         width: 100%;
     }
 
     @media screen and (max-width: 480px) {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        margin-left: 10px;
+        padding: 10px;
+        width: 100%;
+    }
+
+    @media screen and (max-width: 400px) {
         display: flex;
         flex-direction: column;
         row-gap: 20px;
@@ -66,11 +75,11 @@ export const FooterLinkTitle = styled.h1`
     margin-left: 160px;
 
     @media screen and (max-width: 768px) {
-        margin-left: 0px;
+        margin-left: 3px;
     }
 
     @media screen and (max-width: 480px) {
-        margin-left: 0px;
+        margin-left: 5px;
         font-size: 2rem;
     }
 `;

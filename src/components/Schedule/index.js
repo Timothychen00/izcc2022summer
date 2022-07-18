@@ -37,7 +37,7 @@ const Schedule = () => {
                             <ScheduleTD>破冰遊戲</ScheduleTD>
                             <ScheduleTD>早操</ScheduleTD>
                             <ScheduleTD>早操</ScheduleTD>
-                            <ScheduleTD>團康活動</ScheduleTD>
+                            <ScheduleTD>神秘活動</ScheduleTD>
                             <ScheduleTD>早操</ScheduleTD>
                             <ScheduleTD>早操</ScheduleTD>
                             <ScheduleTD>早操</ScheduleTD>
@@ -47,7 +47,7 @@ const Schedule = () => {
                             <ScheduleTD>大地遊戲</ScheduleTD>
                             <ScheduleTD>量子</ScheduleTD>
                             <ScheduleTD>RPG</ScheduleTD>
-                            <ScheduleTD>團康活動</ScheduleTD>
+                            <ScheduleTD>神秘活動</ScheduleTD>
                             <ScheduleTD>演算法</ScheduleTD>
                             <ScheduleTD>資安</ScheduleTD>
                             <ScheduleTD>成果發表</ScheduleTD>
@@ -57,7 +57,7 @@ const Schedule = () => {
                             <ScheduleTD>午休</ScheduleTD>
                             <ScheduleTD>午休</ScheduleTD>
                             <ScheduleTD>午休</ScheduleTD>
-                            <ScheduleTD>團康活動</ScheduleTD>
+                            <ScheduleTD>神秘活動</ScheduleTD>
                             <ScheduleTD>午休</ScheduleTD>
                             <ScheduleTD>午休</ScheduleTD>
                             <ScheduleTD>午休</ScheduleTD>
@@ -67,20 +67,20 @@ const Schedule = () => {
                             <ScheduleTD>DC Bot</ScheduleTD>
                             <ScheduleTD>企業參訪</ScheduleTD>
                             <ScheduleTD>C++</ScheduleTD>
-                            <ScheduleTD>團康活動</ScheduleTD>
-                            <ScheduleTD>趣味遊戲</ScheduleTD>
+                            <ScheduleTD>神秘活動</ScheduleTD>
+                            <ScheduleTD>神秘活動</ScheduleTD>
                             <ScheduleTD>HTML + CSS</ScheduleTD>
-                            <ScheduleTD>團康活動</ScheduleTD>
+                            <ScheduleTD>神秘活動</ScheduleTD>
                         </ScheduleTR>
                         <ScheduleTR>
                             <ScheduleTimeTD>17:00 ~ 21:00</ScheduleTimeTD>
                             <ScheduleTD></ScheduleTD>
                             <ScheduleTD></ScheduleTD>
                             <ScheduleTD></ScheduleTD>
+                            <ScheduleTD>神秘活動</ScheduleTD>
                             <ScheduleTD></ScheduleTD>
-                            <ScheduleTD>趣味遊戲</ScheduleTD>
                             <ScheduleTD></ScheduleTD>
-                            <ScheduleTD>團康活動</ScheduleTD>
+                            <ScheduleTD>神秘活動</ScheduleTD>
                         </ScheduleTR>
                     </ScheduleTBody>
                 </ScheduleTable>
