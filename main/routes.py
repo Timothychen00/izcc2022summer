@@ -28,10 +28,7 @@ def about():
         if not form.file.data:
             form.file.errors.append('請上傳檔案')
             return render_template('join.html',form=form)
-        
-        if not form.yellow_card.data:
-            form.yellow_card.errors.append('請上傳檔案')
-            return render_template('join.html',form=form)
+
         # print(form.name.name)
         msg=db_model.insert_data(form)
 
@@ -39,10 +36,7 @@ def about():
             if 'file' in msg:
                 if not msg['file']:
                     form.file.errors.append(msg['file'])
-            if 'yellow' in msg:
-                if not msg['yellow']:
-                    form.yellow_card.errors.append(msg['yellow'])
-            
+
         if msg:
             flash(str(list(msg.values())).replace('[','').replace(']','').replace('\'',''))
         else:

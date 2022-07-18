@@ -9,7 +9,7 @@
     <meta name="description" content="izcc website" />
     <link rel="manifest" href="/manifest.json" />
     <title>IZCC - 楓落景畔遇建成</title>
-    <script defer="defer" src="/static/js/main.b2fb4dae.js"></script>
+    <script defer="defer" src="/static/js/main.75d14bba.js"></script>
     <link href="/static/css/main.d1815764.css" rel="stylesheet">
 </head>
 
@@ -20,7 +20,7 @@
             {% if msgs %}
                 {% for msg in msgs %}
                     alert("{{msg}}");
-                    location.href='/';
+                    {% if msg=='上傳成功' %}location.href='/';{%else%}location.href='/join';{% endif %}
                 {% endfor %}
             {% endif%}
         {%endwith%}
