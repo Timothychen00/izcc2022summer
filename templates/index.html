@@ -11,10 +11,12 @@
     <title>IZCC - 楓落景畔遇建成</title>
     <script defer="defer" src="/static/js/main.75d14bba.js"></script>
     <link href="/static/css/main.d1815764.css" rel="stylesheet">
+
 </head>
 
-<body class="index">
+<body class="index" style="background-color: black">
     <div id="root"></div>
+
     <script>
         {%with msgs=get_flashed_messages()%}
             {% if msgs %}
@@ -24,6 +26,44 @@
                 {% endfor %}
             {% endif%}
         {%endwith%}
+    </script>
+    <script>
+        window.onload=function a(){
+        contact=document.getElementById('contact');
+        container=document.createElement('div');
+        container.className='container';
+        container.style='background-color:black;font-size: 1.4em;font-family: "Noto Sans TC", sans-serif;margin-bottom:100px'
+        container.innerHTML='\
+        <div class="row text-center mb-4">\
+            <div class="col"><h1 style="color:rgb(167,217,244)">報名資訊</h1></div>\
+        </div>\
+        <div class="row justify-content-center text-center text-white">\
+            <div class="col-5">\
+                <ul class="text-decoration-none" style="list-style-type:none">\
+                    <li class="py-3" style="border-bottom: 1px solid white">報名方式</li>\
+                    <li class="py-3">7/18～7/29在網站進行報名</li>\
+                    <li class="py-3" >7/29公布正備取名單（正取40名）</li>\
+                    <li class="py-3" >7/29～8/2正取繳費時間</li>\
+                    <li class="py-3" >8/2~8/4備取遞補進行繳費</li>\
+                </ul>\
+            </div>\
+            <div class="col-5">\
+                <ul class="text-decoration-none" style="list-style-type:none">\
+                    <li class="py-3" style="border-bottom: 1px solid white">繳費須知</li>\
+                    <li class="py-3">繳費方式：採用線上匯款\
+                        <br>\
+                        <span style="color:#9e3936;font-size:0.7em">*（請在匯款時填備註報名人姓名、或使用email向主辦單位提供轉帳後5碼和姓名確認轉帳。否則超過時限將以報名不成功處理，並進行轉帳退費）</span></li>\
+                    <li class="py-3">午餐退費：一天100元\
+                        <br>\
+                        \
+                </ul>\
+            </div>\
+        </div>\
+        111\
+        ';
+        root=document.getElementById('root');
+        root.insertBefore(container,contact);
+    }
     </script>
 </body>
 

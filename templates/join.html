@@ -40,17 +40,20 @@
                     {% endfor %}
                     {% endif %}
                     </ul>
-                <label for="new-school" class="form-label text-white ms-4 mt-4">錄取學校</label>
-                    <div class="mx-4">
-                        {{form.new_school(class_='form-control')}}
+                <label for="size" class="form-label text-white ms-4 mt-4 w-100">訓服尺寸（最接近尺寸，儘量分配）</label>
+                    {%for subitem in form.size%}
+                    <div class="form-check form-check-inline ms-4">
+                        {{subitem(class_="form-check-input") }}
+                        {{subitem.label(class_='form-check-label text-white')}}
+                        <ul class="ms-3 pt-1">
+                        {% if form.size.errors %}
+                        {% for error in form.size.errors %}
+                            <li style="color: red;">{{error}}</li>
+                        {% endfor %}
+                        {% endif %}
+                        </ul>
                     </div>
-                    <ul class="ms-3 pt-1">
-                    {% if form.new_school.errors %}
-                    {% for error in form.new_school.errors %}
-                        <li style="color: red;">{{error}}</li>
-                    {% endfor %}
-                    {% endif %}
-                    </ul>
+                    {%endfor%}
                 <label for="birth" class="form-label text-white ms-4 mt-4">生日</label>
                     <div class="mx-4">
                         <input type="date" class="form-control" id="birth" name="birth">
@@ -173,7 +176,7 @@
                     {% endfor %}
                     {% endif %}
                     </ul>
-
+                    <span class="ms-4" style="color: red">*注意此活動不提供住宿</span>
                 <div class="mx-4">
                     <button type="submit" class="submit mt-4 mb-5 " >送出報名 </button>
                 </div>

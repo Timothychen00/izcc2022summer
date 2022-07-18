@@ -6,7 +6,7 @@ from wtforms.validators import Email, EqualTo,Length,InputRequired,Regexp
 class JoinForm(FlaskForm):
     name=TextField('姓名',validators=[InputRequired('這是必填欄位')])
     old_school=TextField('就讀學校',validators=[InputRequired('這是必填欄位')])
-    new_school=TextField('錄取學校',validators=[InputRequired('這是必填欄位')])
+    size=RadioField('訓服尺寸',validators=[InputRequired('這是必填欄位')],choices=['S','M','L','XL'])
     birth=DateField('生日',validators=[InputRequired('這是必填欄位')])
     sex=RadioField('性別',validators=[InputRequired('這是必填欄位')],choices=['男','女'])
     email=EmailField("Email",validators=[InputRequired("此為必填欄目"),Email("請輸入正確的郵箱格式")])
