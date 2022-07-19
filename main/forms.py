@@ -12,6 +12,7 @@ class JoinForm(FlaskForm):
     email=EmailField("Email",validators=[InputRequired("此為必填欄目"),Email("請輸入正確的郵箱格式")])
     phone=TextField('手機',validators=[InputRequired('這是必填欄位')])
     ID=TextField('身分證字號',validators=[InputRequired('這是必填欄位')])
+    parentName=TextField('監護人姓名',validators=[InputRequired('這是必填欄位')])
     parentPhone=TextField('家人手機',validators=[InputRequired('這是必填欄位')])
     parentID=TextField('家人身分證字號',validators=[InputRequired('這是必填欄位')])
     parentRelation=TextField('家人關係',validators=[InputRequired('這是必填欄位')])

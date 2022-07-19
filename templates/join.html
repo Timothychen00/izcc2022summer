@@ -114,6 +114,17 @@
                         {% endif %}
                         </ul>
                     </div>
+                <label for="phone" class="form-label text-white ms-4 mt-4">監護人姓名</label>
+                    <div class="mx-4">
+                        {{form.parentName(class_='form-control')}}
+                        <ul class="ms-3 pt-1">
+                        {% if form.parentName.errors %}
+                        {% for error in form.parentName.errors %}
+                            <li style="color: red;">{{error}}</li>
+                        {% endfor %}
+                        {% endif %}
+                        </ul>
+                    </div>
                 <label for="phone" class="form-label text-white ms-4 mt-4">監護人手機</label>
                     <div class="mx-4">
                         {{form.parentPhone(class_='form-control')}}
