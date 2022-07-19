@@ -4,8 +4,9 @@ from bson.binary import Binary
 from werkzeug.utils import secure_filename
 load_dotenv()
 
-ALLOWED_EXTENSIONS = { 'pdf', 'png', 'jpg', 'jpeg'}
+ALLOWED_EXTENSIONS = { 'pdf', 'png', 'jpg', 'jpeg','heic','HEIC'}
 def allowed_file(filename):
+    print(filename.rsplit('.', 1)[1])
     return '.' in filename and \
            filename.rsplit('.', 1)[1] in ALLOWED_EXTENSIONS
 class DB():
