@@ -21,4 +21,4 @@ for i in results:
 
 data_filename='12'
 # os.remove('12.xlsx')
-df.to_csv(data_filename+'.csv',encoding='utf-8',index=None)
+df.to_excel(data_filename+'.xlsx',encoding='utf-8',index=None)
