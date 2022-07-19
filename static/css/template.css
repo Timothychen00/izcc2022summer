@@ -34,3 +34,11 @@ input{
 .submit:hover{
   background-color: rgb(49, 99, 197);
 }
+
+
+.img{
+  background-image: url(static/media/Hero.1f8720b1c7ee778179ba.png);
+  background-position: center;
+  background-size:contain;
+  
+}
