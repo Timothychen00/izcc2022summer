@@ -25,7 +25,6 @@ const InfoSection = ({
     heading,
     darkText,
     description,
-    to,
     cyan,
     dark,
     dark2,

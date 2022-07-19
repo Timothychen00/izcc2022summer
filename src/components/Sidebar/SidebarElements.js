@@ -37,6 +37,10 @@ export const SidebarWrapper = styled.div`
     @media screen and (max-width: 768px) {
         margin-left: 40px;
     }
+
+    @media screen and (max-width: 480px) {
+        margin-left: 50px;
+    }
 `;
 
 export const SidebarMenu = styled.ul`
@@ -79,6 +83,10 @@ export const SideBtnWrap = styled.div`
 
     @media screen and (max-width: 768px) {
         margin-left: 40px;
+    }
+
+    @media screen and (max-width: 480px) {
+        margin-left: 50px;
     }
 `;
 

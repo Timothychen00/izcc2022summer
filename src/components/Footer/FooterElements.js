@@ -28,6 +28,14 @@ export const FooterLinksWrapper = styled.div`
     display: grid;
     width: 100%;
     height: 100%;
+
+    @media screen and (max-width: 820px) {
+        margin-left: 25px;
+    }
+
+    @media screen and (max-width: 768px) {
+        margin-left: 0px;
+    }
 `;
 
 export const FooterLinkItems = styled.div`
@@ -147,6 +155,10 @@ export const WebsiteRights = styled.small`
     letter-spacing: 2px;
     margin-left: 160px;
     font-family: "Noto Sans TC", sans-serif;
+
+    @media screen and (max-width: 820px) {
+        margin-left: 5px;
+    }
 
     @media screen and (max-width: 768px) {
         margin-left: 0px;

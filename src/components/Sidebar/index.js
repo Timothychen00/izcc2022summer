@@ -52,6 +52,17 @@ const Sidebar = ({ isOpen, toggle }) => {
                         行程
                     </SidebarLink>
                     <SidebarLink
+                        to="caption"
+                        onClick={toggle}
+                        smooth={true}
+                        duration={800}
+                        spy={true}
+                        exact="true"
+                        offset={-80}
+                    >
+                        說明
+                    </SidebarLink>
+                    <SidebarLink
                         to="contact"
                         onClick={toggle}
                         smooth={true}

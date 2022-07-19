@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Caption from "../components/Caption";
 import Class1 from "../components/Classes/Class_1";
 import Class2 from "../components/Classes/Class_2";
 import Footer from "../components/Footer";
@@ -25,6 +26,7 @@ const Home = () => {
             <Class1 />
             <Class2 />
             <Schedule />
+            <Caption />
             <Footer />
         </>
     );

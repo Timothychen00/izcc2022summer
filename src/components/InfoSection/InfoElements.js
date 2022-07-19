@@ -56,12 +56,17 @@ export const TextWrapper = styled.div`
     padding-top: 0;
     padding-bottom: 60px;
 
+    @media screen and (max-width: 1000px) {
+        margin-left: 80px;
+    }
+
     @media screen and (max-width: 768px) {
         padding-top: 60px;
+        margin-left: 90px;
     }
 
     @media screen and (max-width: 480px) {
-        margin-left: 10px;
+        margin-left: 40px;
     }
 
     @media screen and (max-width: 375px) {
@@ -158,15 +163,25 @@ export const Img = styled.img`
     width: 100%;
     margin: 0 0 10px 0;
 
-    @media screen and (max-width: 768px) {
-        width: 80%;
-        padding-left: 15px;
+    @media screen and (max-width: 1000px) {
+        width: 70%;
+        padding-left: 30px;
         margin: -30px 0 30px 0;
+    }
+
+    @media screen and (max-width: 768px) {
+        width: 70%;
+        margin-left: 55px;
     }
 
     @media screen and (max-width: 480px) {
         width: 90%;
         margin-left: 0px;
+    }
+
+    @media screen and (max-width: 420px) {
+        width: 90%;
+        margin-left: -15px;
     }
 
     @media screen and (max-width: 375px) {
