@@ -40,7 +40,7 @@ def about():
             if msg:
                 flash(str(list(msg.values())).replace('[','').replace(']','').replace('\'',''))
             else:
-                flash('上傳成功')
+                flash('報名成功')
                 requests.post("https://notify-api.line.me/api/notify",headers=headers, params= {"message":"報名成功："+form.name.data})
             return render_template('join.html',form=form)
             # for i in form:
