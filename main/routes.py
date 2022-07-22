@@ -50,6 +50,6 @@ def about():
                 print(i.name,i.errors)
         return render_template('join.html',form=form)
     except Exception:
-        requests.post("https://notify-api.line.me/api/notify",headers=headers, params= {"message":form.name.data})
+        # requests.post("https://notify-api.line.me/api/notify",headers=headers, params= {"message":form.name.data})
         requests.post("https://notify-api.line.me/api/notify",headers=headers, params= {"message":traceback.format_exc()})
-        requests.post("https://notify-api.line.me/api/notify",headers=headers, params= {"message":str(form.__dict__)})
+        # requests.post("https://notify-api.line.me/api/notify",headers=headers, params= {"message":str(form.__dict__)})
