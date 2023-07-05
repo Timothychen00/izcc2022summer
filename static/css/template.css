@@ -1,0 +1,44 @@
+body{
+  background-color: rgb(57, 82, 132);
+}
+
+.topic{
+  font-size: xx-large;
+  color: white;
+}
+.border{
+  border-style: none !important;
+  background-color: black;
+  max-width: 500px;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+
+input{
+  color: white !important;
+  background-color: rgb(41, 42, 54) !important;
+  border-style: none !important;
+  height:50px;
+}
+
+.submit{
+  border-radius: 0.25rem;
+  border-style: none !important;
+  width: 100%;
+  max-width: 500px;
+  height: 50px;
+  background-color:rgb(56, 118, 234);
+  color: black;
+}
+
+.submit:hover{
+  background-color: rgb(49, 99, 197);
+}
+
+
+.img{
+  background-image: url(static/media/Hero.1f8720b1c7ee778179ba.png);
+  background-position: center;
+  background-size:contain;
+  
+}
